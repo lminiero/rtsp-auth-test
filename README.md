@@ -1,7 +1,7 @@
 rtsp-auth-test
 ==============
 
-This is a simple self-contained application for testing RTSP authentication support in libcurl, which has been [broken](https://curl.se/docs/knownbugs.html#RTSP_authentication_breaks_witho) for a while. It uses [GStreamer](https://gstreamer.freedesktop.org/documentation/gst-rtsp-server/) to spawn an RTSP server that requires authentication, and then uses cURL to try and send an authenticated RTSP DESCRIBE to the local server. The main aim of this simple application is providing with a quick and easy way to replicate the RTSP authentication problem: requiring GStreamer as an additional dependency for the RTSP server part is probably overkill, so I'll likely change this to something more self-contained.
+This is a simple self-contained application for testing RTSP authentication support in libcurl, which has been [broken](https://curl.se/docs/knownbugs.html#RTSP_authentication_breaks_witho) for a while. It spawns a fake RTSP server that requires authentication, and then uses cURL to try and send an authenticated RTSP DESCRIBE to the local server. The main aim of this simple application is providing with a quick and easy way to replicate the RTSP authentication problem in a completely self-contained way.
 
 Assuming the right dependencies are installed, just type
 

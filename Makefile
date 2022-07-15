@@ -1,6 +1,6 @@
 CC = gcc
-DEPS = $(shell pkg-config --cflags libcurl gstreamer-1.0 gstreamer-rtsp-server-1.0) -D_GNU_SOURCE
-DEPS_LIBS = $(shell pkg-config --libs libcurl gstreamer-1.0 gstreamer-rtsp-server-1.0)
+DEPS = $(shell pkg-config --cflags libcurl) -D_GNU_SOURCE
+DEPS_LIBS = $(shell pkg-config --libs libcurl) -pthread
 OPTS = -Wall -Wstrict-prototypes -Wmissing-prototypes -Wmissing-declarations -Wunused #-Werror #-O2
 GDB = -g -ggdb
 OBJS = src/rtsp-auth-test.o
